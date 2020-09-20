@@ -1,0 +1,257 @@
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+$light-grayish-blue: hsl(272, 41%, 92%);
+$pale-violet: hsl(276, 100%, 81%);
+$moderate-violet: hsl(276, 55%, 52%);
+$desaturated-dark-violet: hsl(271, 15%, 43%);
+$grayish-blue: hsl(206, 6%, 79%);
+$very-dark-desaturated-violet: hsl(271, 36%, 24%);
+$dark-grayish-violet: hsl(270, 7%, 64%);
+
+$gradient-light-magenta: hsl(284, 100%, 63%);
+$gradient-light-violet: hsl(267, 100%, 61%);
+
+
+$white: hsl(0, 0%, 100%);
+$secondary-light-grayish-violet: hsl(270, 20%, 96%);
+$secondary-very-dark-desaturated-violet: hsl(271, 36%, 24%);
+$secondary-very-light-magenta: hsl(289, 100%, 72%);
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: $secondary-light-grayish-violet;
+    position: relative;
+}
+
+.app-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    &__background{
+        position: absolute;
+        height: 700px;
+        width: 500px;
+        top: -200px;
+        left: -315px;
+        background: linear-gradient(193.29deg, $gradient-light-magenta 0%, $gradient-light-violet 100%);
+        border-radius: 0px 0px 248px 248px;
+        z-index: -100;
+    }
+    @media screen and (min-width: 1024px) {
+        height: 100vh;
+        width: auto;
+        margin: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        &__background{
+            top: -40px;
+            left: -100px;
+        }
+    }
+}
+
+.phone {
+    margin: 4em auto;
+    height: 480px;
+    width: 240px;
+    border-radius: 30px;
+    background: $white;
+    box-shadow: 0px 0px 64px -30px rgba(0,0,0,0.75); 
+    position: relative;
+    &__whitespace {
+        position: absolute;
+        top: 9px;
+        left: calc(50% - 65px);
+        width: 130px;
+        height: 20px;
+        background: $white;
+        border-radius: 0 0 15px 15px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+        height: 460px;
+        border-radius: 20px;
+        background: $secondary-light-grayish-violet;
+        margin: auto;
+        margin-top: 10px;
+    }
+    &__header {
+        display: flex;
+        padding: 10px;
+        flex-direction: row;
+        height: 68px;
+        background: linear-gradient(90deg, $gradient-light-violet 0%, $gradient-light-magenta 100%);
+        border-radius: 20px 20px 8px 8px;
+        padding: 30px .5rem 10px .5rem;
+        margin-bottom: 2px;
+        svg {
+            stroke: $white;
+            color: $white;
+            padding: 3px;
+        }
+    }
+    &__chevron {
+        align-self: center;
+    }
+    &__threedots {
+        align-self: center;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    &__profile {
+        img {
+            border-radius: 50%;
+            border: 1px solid $white;
+            margin: 0 .5rem 0 0;
+        }
+    }
+    &__title {
+        margin-top: 1px;
+        h2 {
+            margin: 0;
+            margin-bottom: 2px;
+            color: $white;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        p {
+            color: $pale-violet;
+            font-size: 8px;
+            margin: 0;
+        }
+    }
+
+    &__left {
+        margin: .5rem;
+        padding: .3rem .5rem;
+        background: $light-grayish-blue;
+        max-width: 130px;
+        border-radius: 11px 11px 11px 3px;
+        p{
+            font-size: 8px;
+            font-weight: 700;
+            color: $pale-violet;
+            margin: 0;
+        }
+    }
+    &__right {
+        margin: 0 .5rem .5rem auto;
+        padding: .3rem .5rem;
+        background: $white;
+        max-width: 120px;
+        min-width: 80px;
+        border-radius: 11px 11px 3px 11px;
+        box-shadow: 0px 0px 64px -12px rgba(0,0,0,0.75); 
+        display: table;
+        p{
+            font-size: 8px;
+            color: $desaturated-dark-violet;
+            margin: 0;
+        }
+    }
+
+    &__imgGrid{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+            margin: .5rem .25rem;
+        }
+    }
+
+    &__prices {
+        display: flex;
+        color: $white;
+        justify-content: center;
+        flex-direction: row;
+        margin: .5em;
+        padding: .5em;
+        width: 160px;
+        border-radius: 11px 11px 11px 3px;
+        background: linear-gradient(90deg, $gradient-light-magenta 0%, $gradient-light-violet 100%);
+        svg {
+            height: 12px;
+            color: $secondary-very-light-magenta;
+        }
+        p {
+            font-size: .5rem;
+            color: $pale-violet;
+            margin: 0;
+            margin-left: .5rem;
+            font-weight: 700;
+        }
+        h3{
+            font-size: 13px;
+            font-weight: 700;
+            margin: 0;
+            margin-left: auto;
+            margin-right: .5rem;
+        }
+    }
+
+    &__type {
+        display: flex;
+        border-radius: 1rem;
+        background: $white;
+        height: 2rem;
+        margin: .5rem;
+        span {
+            margin-left: 1rem;
+            align-self: center;
+            color: $grayish-blue;
+            font-size: .5rem;
+        }
+        svg {
+            color: $white;
+            background: $secondary-very-dark-desaturated-violet;
+            height: 24px;
+            width: 24px;
+            margin-left: auto;
+            margin-right: .5rem;
+            border-radius: 12px;
+            align-self: center;
+            padding: 6px;
+            stroke: $white;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        margin: auto 5% auto 24%;
+    }
+}
+
+.text {
+    text-align: center;
+    &__wrapper {
+        margin: 0 2rem 0 2em;
+    }
+    
+    &__content {        
+        font-size: 1rem;
+        color: $dark-grayish-violet;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: $secondary-very-dark-desaturated-violet;
+    }
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex: 1; 
+        align-items: center;
+        text-align: left;
+        &__content {
+            max-width: 430px;
+        }
+    }
+}

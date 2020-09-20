@@ -1,0 +1,321 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  background-color: #f5f3f7;
+  position: relative;
+}
+
+.app-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-container__background {
+  position: absolute;
+  height: 700px;
+  width: 500px;
+  top: -200px;
+  left: -315px;
+  background: linear-gradient(193.29deg, #cd42ff 0%, #9238ff 100%);
+  border-radius: 0px 0px 248px 248px;
+  z-index: -100;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-container {
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .app-container__background {
+    top: -40px;
+    left: -100px;
+  }
+}
+
+.phone {
+  margin: 4em auto;
+  height: 480px;
+  width: 240px;
+  border-radius: 30px;
+  background: white;
+  -webkit-box-shadow: 0px 0px 64px -30px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 64px -30px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.phone__whitespace {
+  position: absolute;
+  top: 9px;
+  left: calc(50% - 65px);
+  width: 130px;
+  height: 20px;
+  background: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.phone__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 220px;
+  height: 460px;
+  border-radius: 20px;
+  background: #f5f3f7;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.phone__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 68px;
+  background: -webkit-gradient(linear, left top, right top, from(#9238ff), to(#cd42ff));
+  background: linear-gradient(90deg, #9238ff 0%, #cd42ff 100%);
+  border-radius: 20px 20px 8px 8px;
+  padding: 30px .5rem 10px .5rem;
+  margin-bottom: 2px;
+}
+
+.phone__header svg {
+  stroke: white;
+  color: white;
+  padding: 3px;
+}
+
+.phone__chevron {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.phone__threedots {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.phone__profile img {
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0 .5rem 0 0;
+}
+
+.phone__title {
+  margin-top: 1px;
+}
+
+.phone__title h2 {
+  margin: 0;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.phone__title p {
+  color: #d89eff;
+  font-size: 8px;
+  margin: 0;
+}
+
+.phone__left {
+  margin: .5rem;
+  padding: .3rem .5rem;
+  background: #ebe2f3;
+  max-width: 130px;
+  border-radius: 11px 11px 11px 3px;
+}
+
+.phone__left p {
+  font-size: 8px;
+  font-weight: 700;
+  color: #d89eff;
+  margin: 0;
+}
+
+.phone__right {
+  margin: 0 .5rem .5rem auto;
+  padding: .3rem .5rem;
+  background: white;
+  max-width: 120px;
+  min-width: 80px;
+  border-radius: 11px 11px 3px 11px;
+  -webkit-box-shadow: 0px 0px 64px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 64px -12px rgba(0, 0, 0, 0.75);
+  display: table;
+}
+
+.phone__right p {
+  font-size: 8px;
+  color: #6e5d7e;
+  margin: 0;
+}
+
+.phone__imgGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.phone__imgGrid img {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  margin: .5rem .25rem;
+}
+
+.phone__prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: .5em;
+  padding: .5em;
+  width: 160px;
+  border-radius: 11px 11px 11px 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#cd42ff), to(#9238ff));
+  background: linear-gradient(90deg, #cd42ff 0%, #9238ff 100%);
+}
+
+.phone__prices svg {
+  height: 12px;
+  color: #e570ff;
+}
+
+.phone__prices p {
+  font-size: .5rem;
+  color: #d89eff;
+  margin: 0;
+  margin-left: .5rem;
+  font-weight: 700;
+}
+
+.phone__prices h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+  margin-left: auto;
+  margin-right: .5rem;
+}
+
+.phone__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
+  background: white;
+  height: 2rem;
+  margin: .5rem;
+}
+
+.phone__type span {
+  margin-left: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #c6cacd;
+  font-size: .5rem;
+}
+
+.phone__type svg {
+  color: white;
+  background: #3e2753;
+  height: 24px;
+  width: 24px;
+  margin-left: auto;
+  margin-right: .5rem;
+  border-radius: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 6px;
+  stroke: white;
+}
+
+@media screen and (min-width: 1024px) {
+  .phone {
+    margin: auto 5% auto 24%;
+  }
+}
+
+.text {
+  text-align: center;
+}
+
+.text__wrapper {
+  margin: 0 2rem 0 2em;
+}
+
+.text__content {
+  font-size: 1rem;
+  color: #a39daa;
+}
+
+.text__title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #3e2753;
+}
+
+@media screen and (min-width: 1024px) {
+  .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+  .text__content {
+    max-width: 430px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
